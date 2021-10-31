@@ -1,8 +1,9 @@
-function getTime () {
+function getTime() {
     let current = new Date();
     let hours = current.getHours();
     let minutes = current.getMinutes();
     let seconds = current.getSeconds();
+    if (hours === 0) { hours = 24; }
     if (hours > 12) {
         hours = hours - 12; 
     }
@@ -16,6 +17,6 @@ function updateTime() {
     setTimeout(updateTime, 1000);
 }
 
-function addZero (number) {
+function addZero(number) {
     return number < 10 ? "0"+number : number;
 }
