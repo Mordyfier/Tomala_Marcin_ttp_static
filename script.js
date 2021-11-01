@@ -4,16 +4,16 @@ function getTime() {
     let hours = current.getHours();
     let minutes = current.getMinutes();
     let seconds = current.getSeconds();
-    //To implement AM/PM, we can add the following variable that would also need to be concatenated at the end of currentTime.
-    //let deMeridiem = "AM"
+    //To implement AM/PM, we can add the following variable that will be concatenated at the end of currentTime.
+    let meridiem = "AM"
     // getHours returns 24-clock hour values. To convert to 12-hour clock, we subtract 12. Any value above 12 also indicates a PM hour.
     if (hours > 12) {
         hours -= 12;
-        //deMeridiem = "PM"
+        meridiem = "PM"
     }
     // Since Date() returns hours from 0-23, to represent midnight as '12AM' we add 12.
     if (hours === 0) { hours = 12; }
-    currentTime = addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds);
+    currentTime = addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds) + meridiem;
     return currentTime;
 }
 
