@@ -10,7 +10,7 @@ function getTime() {
     }
     // Since Date() returns hours from 0-23, to represent midnight as '12AM' we add 12.
     if (hours === 0) { hours = 12; }
-    currentTime = addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds);
+    currentTime = addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds) + ".";
     return currentTime;
 }
 

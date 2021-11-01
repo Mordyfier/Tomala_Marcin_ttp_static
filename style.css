@@ -1,6 +1,10 @@
 body {
+    margin-top: 10rem;
     text-align: center;
     background-color: lightblue;
     color: navy;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.greeting, .time {
+    display: inline;
 }
